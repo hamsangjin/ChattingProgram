@@ -258,7 +258,7 @@ public class ChatThread extends Thread {
         LocalDateTime now = LocalDateTime.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMddHHmmss");
         String timestamp = now.format(formatter);
-        String fileName = "room_" + roomId + "_" + timestamp + "_log.txt";
+        String fileName = "log/"+ "room_" + roomId + "_" + timestamp + "_log.txt";
 
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, true))) {
             synchronized (chatHistory) {
